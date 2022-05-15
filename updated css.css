@@ -1,0 +1,102 @@
+body {
+    background-color: #666;
+    margin: 0;
+}
+
+.note {
+    width: 17%;
+    height: 0;
+    padding-bottom: 18%;
+    margin-left: 18px;
+    margin-top: 18px;
+    position: absolute;
+    background-color: #ffc;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(-6deg);
+    transition: transform 0.15s linear;
+    overflow-y: auto;
+}
+
+.note:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.note:nth-child(3n+3) {
+    transform: rotate(0 deg);
+}
+
+.note_title {
+    cursor: move;
+}
+
+.note:hover,
+.note:focus {
+    transform: rotate(0 deg);
+    transform: scale(1.25);
+    z-index: 10;
+    box-shadow: 8px 8px 10px rgba(33, 33, 33, .7);
+}
+
+@media screen and (max-width: 600px) {
+    .note {
+        width: 40%;
+        height: 0;
+        padding-bottom: 40%;
+        display: block;
+    }
+}
+
+.imgs {
+    width: 75px;
+    height: 75px;
+}
+
+#add_note {
+    text-align: right;
+}
+
+p {
+    margin: 5px;
+    font-family: 'Reenie Beanie';
+    font-size: xx-large;
+}
+
+.x_note_img{
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+                            /* STYLING RIGHT CLICK MENU */
+/* ---------------------------------------------------------------------------------------------- */
+.context-menu {
+    position: absolute;
+    text-align: center;
+    background: lightgray;
+    border: 1px solid black;
+    z-index: 20;
+}
+
+.context-menu ul {
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.context-menu ul li {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: 1px solid black;
+}
+
+.context-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.context-menu ul li:hover {
+    background: darkgray;
+}

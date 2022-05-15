@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <!-- linking css and font page -->
+    <link rel="stylesheet" href="updated css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- page frame -->
+    <div id="container">
+        <!-- notes holder -->
+        <div id="holder">
+            <!-- first default note
+            each note has its own id depends on its number -->
+            <div class="note" id="mydiv1" style="top:0px; left:0px;">
+                <!-- i made a special div for the title as well to make the note draggable only from its title  -->
+                <div class="note_title" id="mydiv1header">
+                    <!-- title -->
+                    <h1> Note 1 </h1>
+                    <img id="ziad" src="images/x_note.png" class="x_note_img" onclick="deleteCurrentNote(this)">
+                    <hr>
+                </div>
+                <!-- text of the first note -->
+                <p contenteditable> wonderfull </p>
+
+            </div>
+        </div>
+
+        <!-- image holder -->
+        <div id="add_note">
+            <!-- add note button image -->
+            <img class="imgs" src="images/add.png" title="add new note" onclick="createNote()">
+
+        </div>
+    </div>
+
+
+    <div id="contextMenu" class="context-menu" style="display:none">
+        <ul>
+            <li onclick="createNote()"><a  href="#">New</a></li>
+        </ul>
+    </div>
+
+
+    </div>
+    <!-- linking javascript -->
+    <script src="updated javascript.js"></script>
+
+</body>
+
+</html>
